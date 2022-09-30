@@ -8,9 +8,9 @@ const range = (start, end) => {
 
 const sum = (array) => {
   let total = 0
-  array.forEach(number => {
+  for (let number of array) {
     total += number
-  })
+  }
   return total
 }
 
