@@ -1,0 +1,16 @@
+<canvas></canvas>
+<script>
+    let cx = document.querySelector("canvas").getContext("2d");
+    cx.beginPath();
+    for (let y = 1; y < 100; y += 1) {
+        cx.moveTo(10, y*10);
+        cx.lineTo(90, y*10);
+        if (y%2 == 1) {
+            cx.lineTo(90, y*10 + 10);
+        } else {
+            cx.moveTo(10, y*10);
+            cx.lineTo(10, y*10 + 10);
+        }
+    }
+    cx.stroke();
+</script>
